@@ -1,7 +1,6 @@
 @extends("layouts.partials.master")
 @section("body")
 
-
   <!-- Start slider  -->
   <section id="aa-slider">
     <div class="aa-slider-area">

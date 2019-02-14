@@ -17,10 +17,10 @@
                             <div class="aa-header-left">
                                 <div class="aa-telephone-no">
                                     <span class="fa fa-phone"></span>
-                                    01026569378
+                                    {{env("MANGER_PHONE")}}
                                 </div>
                                 <div class="aa-email hidden-xs">
-                                    <span class="fa fa-envelope-o"></span> Ahmed.Rashwan2014@yahoo.com
+                                    <span class="fa fa-envelope-o"></span> {{env("MANAGER_EMAIL")}}
                                 </div>
                             </div>
                         </div>

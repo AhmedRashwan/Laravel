@@ -13,6 +13,7 @@
                 <h4>Sign in to your account</h4>
               </div>
               <form class="contactform">
+                @csrf
                 <div class="aa-single-field">
                   <label for="email">Email <span class="required">*</span></label>
                   <input type="email" required="required" aria-required="true" value="" name="email">

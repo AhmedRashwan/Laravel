@@ -255,6 +255,7 @@
                       <div id="respond">
                         <h3 class="reply-title">Leave a Comment</h3>
                         <form id="commentform">
+                          @csrf
                           <p class="comment-notes">
                             Your email address will not be published. Required fields are marked <span class="required">*</span>
                           </p>

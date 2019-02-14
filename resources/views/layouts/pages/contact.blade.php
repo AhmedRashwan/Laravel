@@ -6,10 +6,10 @@
       <div class="row">
         <div class="col-md-12">
           <div class="aa-property-header-inner">
-            <h2>404 Error</h2>
+            <h2>Contact us</h2>
             <ol class="breadcrumb">
-              <li><a href="#">HOME</a></li>
-              <li class="active">404</li>
+              <li><a href="#">Contact</a></li>
+              <li class="active">us</li>
             </ol>
           </div>
         </div>
@@ -29,9 +29,9 @@
                 <h2>Contact</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae placeat aspernatur aperiam, quisquam voluptas enim tempore ab itaque nam modi eos corrupti distinctio nobis labore dolorum quae tenetur. Sapiente, sequi.</p>
                 <ul class="contact-info-list">
-                  <li> <i class="fa fa-phone"></i> 1-700-564-6321</li>
-                  <li> <i class="fa fa-envelope-o"></i> info@homeproperty.com</li>
-                  <li> <i class="fa fa-map-marker"></i> 36008 AL-77, Talladega, AL 35160, USA</li>
+                  <li> <i class="fa fa-phone"></i> {{env("MANGER_PHONE")}}</li>
+                  <li> <i class="fa fa-envelope-o"></i>{{env("MANAGER_EMAIL")}}</li>
+                  <li> <i class="fa fa-map-marker"></i>{{env("MANAGER_LOCATION")}}</li>
                 </ul>
               </div>
             </div>
