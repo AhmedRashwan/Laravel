@@ -43,6 +43,7 @@
               </div>
               <div class="aa-contact-form">
                 <form class="contactform">
+                  @csrf
                   <p class="comment-form-author">
                     <label for="author">Name <span class="required">*</span></label>
                     <input type="text" name="author" value="" size="30" required="required">

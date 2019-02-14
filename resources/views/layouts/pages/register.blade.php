@@ -13,6 +13,7 @@
                 <h4>Create your account and Stay with us</h4>
               </div>
               <form class="contactform">
+                @csrf
                 <div class="aa-single-field">
                   <label for="name">Name <span class="required">*</span></label>
                   <input type="text" required="required" aria-required="true" value="" name="name">

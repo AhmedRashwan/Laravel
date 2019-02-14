@@ -29,6 +29,7 @@
             <div class="aa-properties-content-head">
               <div class="aa-properties-content-head-left">
                 <form action="" class="aa-sort-form">
+                  @csrf
                   <label for="">Sort by</label>
                   <select name="">
                     <option value="1" selected="Default">Default</option>
@@ -38,6 +39,7 @@
                   </select>
                 </form>
                 <form action="" class="aa-show-form">
+                  @csrf
                   <label for="">Show</label>
                   <select name="">
                     <option value="1" selected="12">6</option>
@@ -255,6 +257,7 @@
             <div class="aa-properties-single-sidebar">
               <h3>Properties Search</h3>
               <form action="">
+                @csrf
                 <div class="aa-single-advance-search">
                   <input type="text" placeholder="Type Your Location">
                 </div>

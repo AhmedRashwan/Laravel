@@ -147,6 +147,7 @@
             <div class="aa-properties-single-sidebar">
               <h3>Properties Search</h3>
               <form action="">
+                @csrf
                 <div class="aa-single-advance-search">
                   <input type="text" placeholder="Type Your Location">
                 </div>

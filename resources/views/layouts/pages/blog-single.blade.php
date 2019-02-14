@@ -293,6 +293,7 @@
                   <!-- Start single sidebar -->
                   <div class="aa-blog-sidebar-single">
                     <form action="">
+                      @csrf
                       <div class="aa-blog-search">
                         <input class="aa-search-text" type="text" placeholder="Search...">
                         <button class="aa-search-submit" type="submit">
