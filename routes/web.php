@@ -11,6 +11,76 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.pages.index');
+})->name("Home");
+
+Route::get('/Register', function () {
+    return view('layouts.pages.register');
+})->name("Register");
+
+Route::get('/Login', function () {
+    return view('layouts.pages.signin');
+})->name("Login");
+
+
+Route::get('/support', function () {
+    return view('layouts.pages.contact');
+})->name("support");
+
+
+Route::get('/license', function () {
+    return view('layouts.pages.index');
+})->name("license");
+
+
+Route::get('/FAQ', function () {
+    return view('layouts.pages.index');
+})->name("FAQ");
+
+
+Route::get('/Privacy', function () {
+    return view('layouts.pages.index');
+})->name("Privacy");
+
+Route::get('/Gallery', function () {
+    return view('layouts.pages.gallery');
+})->name("Gallery");
+
+Route::get('/Contact', function () {
+    return view('layouts.pages.contact');
+})->name("Contact");
+
+Route::group(['prefix'=>'Properties'], function () {
+    Route::get('/', function () {
+        return view('layouts.pages.properties');
+    })->name("Properties");
+
+    Route::get('/Details', function () {
+        return view('layouts.pages.properties-detail');
+    })->name("Properties/Details");
+});
+
+
+Route::group(['prefix'=>'Blog'], function () {
+    Route::get('/', function () {
+        return view('layouts.pages.blog-archive');
+    })->name("Blog");
+
+    Route::get('/Details', function () {
+        return view('layouts.pages.blog-single');
+    })->name("Blog/Details");
+
+});
+
+Route::group(['prefix'=>'Error'], function () {
+    Route::get('/', function () {
+        return view('layouts.pages.404');
+    })->name("Error");
+
+    Route::get('/404', function () {
+        return view('layouts.pages.404');
+    })->name("Error/404");
+
 });
