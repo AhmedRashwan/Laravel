@@ -48,17 +48,34 @@ Route::get('/Gallery', function () {
     return view('layouts.pages.gallery');
 })->name("Gallery");
 
-Route::get('/Contact', function () {
-    return view('layouts.pages.contact');
-})->name("Contact");
+Route::group(["prefix"=>"Contact"],function(){
+
+    Route::get('/', function () {
+        return view('layouts.pages.contact');
+    })->name("Contact");
+
+    Route::post('/Create/{author?}/{email}/{subject}/{comment}/{submit}', function ($author) {
+        return view('layouts.pages.contact');
+    })->name("Contact.create");
+});
 
 Route::group(['prefix'=>'Properties'], function () {
     Route::get('/', function () {
         return view('layouts.pages.properties');
     })->name("Properties");
 
-    Route::get('/Details', function () {
-        return view('layouts.pages.properties-detail');
+    Route::get('/Details/{id?}', function ($id=0) {
+        $Property = ['price'=>'$3000',
+            'mainDescription'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, alias!',
+            'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, alias!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, alias!',
+            'features'=>['4 Bedroom',
+                '3 Baths',
+                'Kitchen',
+                'Air Condition',
+                'Belcony'],
+            'videoUrl'=>'https://www.youtube.com/embed/CegXQps0In4'
+        ];
+        return view('layouts.pages.properties-detail',['Property'=>$Property]);
     })->name("Properties/Details");
 });
 
@@ -82,5 +99,14 @@ Route::group(['prefix'=>'Error'], function () {
     Route::get('/404', function () {
         return view('layouts.pages.404');
     })->name("Error/404");
+
+});
+
+
+Route::group(['prefix'=>'user'],function(){
+    Route::post("/",function(\Illuminate\Http\Request $request){
+
+        return redirect()->route('Login')->with('info',$request->input("email"));
+    })->name("user.login");
 
 });

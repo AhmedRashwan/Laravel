@@ -42,7 +42,7 @@
                 <p>Your email address will not be published. Required fields are marked <strong class="required">*</strong></p>
               </div>
               <div class="aa-contact-form">
-                <form class="contactform">
+                <form class="contactform" method="POST" action="{{route("Contact.create")}}">
                   @csrf
                   <p class="comment-form-author">
                     <label for="author">Name <span class="required">*</span></label>

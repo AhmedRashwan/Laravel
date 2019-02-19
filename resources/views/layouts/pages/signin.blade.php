@@ -2,6 +2,9 @@
 <html lang="en">
 @include("layouts.partials.head")
 <body>
+@if(\Illuminate\Support\Facades\Session::has("info"))
+  <h1>{{\Illuminate\Support\Facades\Session::get('info')}}</h1>
+  @endif
   <section id="aa-signin">
     <div class="container">
       <div class="row">
@@ -12,7 +15,7 @@
                 <a class="aa-property-home" href="index.html">Property Home</a>
                 <h4>Sign in to your account</h4>
               </div>
-              <form class="contactform">
+              <form class="contactform" action="{{route('user.login')}}" method="post">
                 @csrf
                 <div class="aa-single-field">
                   <label for="email">Email <span class="required">*</span></label>
@@ -29,7 +32,7 @@
                 </div>
                 <div class="aa-single-submit">
                   <input type="submit" value="Send Message" class="aa-browse-btn" name="submit">
-                  <p>Don't Have A Account Yet? <a href="register.html">CREATE NOW!</a></p>
+                  <p>Don't Have A Account Yet? <a href="{{route('Register')}}">CREATE NOW!</a></p>
                 </div>
               </form>
             </div>
