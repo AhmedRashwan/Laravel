@@ -20,6 +20,7 @@
   </section>
   <!-- End Proerty header  -->
 
+  @if($Property)
   <!-- Start Properties  -->
   <section id="aa-properties">
     <div class="container">
@@ -237,5 +238,5 @@
     </div>
   </section>
   <!-- / Properties  -->
-
+@endif
   @endsection()
