@@ -62,7 +62,7 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="{{route("Properties")}}">PROPERTIES <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{route("Properties")}}">PROPERTIES</a></li>
-                            <li><a href="{{route("Properties/Details")}}">PROPERTIES DETAIL</a></li>
+                            <li><a href="{{route("Properties.Details")}}">PROPERTIES DETAIL</a></li>
                         </ul>
                     </li>
                     <li><a href="{{route("Gallery")}}">GALLERY</a></li>

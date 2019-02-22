@@ -79,7 +79,7 @@
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" href="{{route("Properties/Details")}}">View Details</a>
+                        <a class="aa-secondary-btn" href="{{route("Properties.Details")}}">View Details</a>
                       </div>
                     </div>
                   </article>
@@ -107,7 +107,7 @@
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" href="{{route("Properties/Details")}}">View Details</a>
+                        <a class="aa-secondary-btn" href="{{route("Properties.Details")}}">View Details</a>
                       </div>
                     </div>
                   </article>
@@ -135,7 +135,7 @@
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" href="{{route("Properties/Details")}}">View Details</a>
+                        <a class="aa-secondary-btn" href="{{route("Properties.Details")}}">View Details</a>
                       </div>
                     </div>
                   </article>
@@ -163,7 +163,7 @@
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" href="{{route("Properties/Details")}}">View Details</a>
+                        <a class="aa-secondary-btn" href="{{route("Properties.Details")}}">View Details</a>
                       </div>
                     </div>
                   </article>
@@ -191,7 +191,7 @@
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" href="{{route("Properties/Details")}}">View Details</a>
+                        <a class="aa-secondary-btn" href="{{route("Properties.Details")}}">View Details</a>
                       </div>
                     </div>
                   </article>
@@ -219,7 +219,7 @@
                         <span class="aa-price">
                           $35000
                         </span>
-                        <a class="aa-secondary-btn" href="{{route("Properties/Details")}}">View Details</a>
+                        <a class="aa-secondary-btn" href="{{route("Properties.Details")}}">View Details</a>
                       </div>
                     </div>
                   </article>

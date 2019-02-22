@@ -12,9 +12,7 @@
 */
 
 
-Route::get('/', function () {
-    return view('layouts.pages.index');
-})->name("Home");
+Route::get('/',"lastPropertiesController@getLastProperties")->name("Home");
 
 Route::get('/Register', function () {
     return view('layouts.pages.register');
@@ -54,7 +52,7 @@ Route::group(["prefix"=>"Contact"],function(){
         return view('layouts.pages.contact');
     })->name("Contact");
 
-    Route::post('/Create/{author?}/{email}/{subject}/{comment}/{submit}', function ($author) {
+    Route::post('/Create/{author?}', function ($author) {
         return view('layouts.pages.contact');
     })->name("Contact.create");
 });
@@ -64,19 +62,22 @@ Route::group(['prefix'=>'Properties'], function () {
         return view('layouts.pages.properties');
     })->name("Properties");
 
-    Route::get('/Details/{id?}', function ($id=0) {
-        $Property = ['price'=>'$3000',
-            'mainDescription'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, alias!',
-            'description'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, alias!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, alias!',
-            'features'=>['4 Bedroom',
+    Route::get('/Details/{id?}', function ($id=0,\Illuminate\Http\Request $request) {
+        $lastProps = ["videoUrl" => "http://www.google.com",
+            "price" => "$30000",
+            "mainDescription"=> "TEST",
+            "description"=>"TEST description",
+            "features" => ['4 Bedroom',
                 '3 Baths',
                 'Kitchen',
                 'Air Condition',
-                'Belcony'],
-            'videoUrl'=>'https://www.youtube.com/embed/CegXQps0In4'
-        ];
-        return view('layouts.pages.properties-detail',['Property'=>$Property]);
-    })->name("Properties/Details");
+                'Balcony']
+            , "type" => "Foor Sale",
+            "data"=>"new Place in new Gerry",
+            "place" => "new Gersy"]
+        ;
+        return view('layouts.pages.properties-detail',['Property'=>$lastProps]);
+    })->name("Properties.Details");
 });
 
 
