@@ -11,7 +11,7 @@
                 </div>
                 <div class="aa-properties-item-content">
                     <div class="aa-properties-info">
-                        @foreach($prop['features'] as $detail)
+                        @foreach(explode(',',($prop['features'])) as $detail)
                          <span>{{$detail}}</span>
                         @endforeach
                     </div>
@@ -23,7 +23,7 @@
                     <span class="aa-price">
                       {{$prop['price']}}
                     </span>
-                        <a href="{{route("Properties.Details",[1],[$prop])}}" class="aa-secondary-btn">View Details</a>
+                        <a href="{{route("Properties.Details",["id"=>$prop['id']])}}" class="aa-secondary-btn">View Details</a>
                     </div>
                 </div>
             </article>

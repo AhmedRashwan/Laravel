@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/',"lastPropertiesController@getLastProperties")->name("Home");
+Route::get('/',"propertyController@getAllProperty")->name("Home");
 
 Route::get('/Register', function () {
     return view('layouts.pages.register');
@@ -62,22 +62,10 @@ Route::group(['prefix'=>'Properties'], function () {
         return view('layouts.pages.properties');
     })->name("Properties");
 
-    Route::get('/Details/{id?}', function ($id=0,\Illuminate\Http\Request $request) {
-        $lastProps = ["videoUrl" => "http://www.google.com",
-            "price" => "$30000",
-            "mainDescription"=> "TEST",
-            "description"=>"TEST description",
-            "features" => ['4 Bedroom',
-                '3 Baths',
-                'Kitchen',
-                'Air Condition',
-                'Balcony']
-            , "type" => "Foor Sale",
-            "data"=>"new Place in new Gerry",
-            "place" => "new Gersy"]
-        ;
-        return view('layouts.pages.properties-detail',['Property'=>$lastProps]);
-    })->name("Properties.Details");
+    Route::get('/Details/{id?}',[
+     "uses"=>"propertyController@getPropertyDetails",
+     "as"=>"Properties.Details"
+    ]);
 });
 
 
